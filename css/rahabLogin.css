@@ -28,9 +28,6 @@ body{
     transition: transform .5s ease, height .2s ease;
 }
 
-.wrapper.active{
-    height: 450px;
-}
 
 .wrapper .form-box{
     width: 100%;
@@ -221,6 +218,13 @@ body{
 
     .green.hov {
         color: #0AA91A;
+    }
+
+    .wrapper .form-box {
+        padding: 20px;
+    }
+    .btn {
+        height: 30px;
     }
 }
 

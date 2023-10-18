@@ -33,10 +33,9 @@
     font-size: 42px; 
     font-family: Poppins; 
     font-weight: 700;
-    margin-left: 50px; 
 }
 nav {
-    position: fixed;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,7 +43,7 @@ nav {
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 5px 20px;
-    width: 100vw;
+    width: 100%;
     z-index: 1111;
 }
 
@@ -251,8 +250,8 @@ nav ul.dropdown-content li a.active {
     margin-top: 20px;
 }
 .circle {
-    width: 600px; 
-    height: 600px; 
+    width: 500px; 
+    height: 500px; 
     background: #0AA91A; 
     border-radius: 100%;
     display: flex;
@@ -262,8 +261,8 @@ nav ul.dropdown-content li a.active {
 }
 
 .circle2 {
-    width: 600px; 
-    height: 600px; 
+    width: 500px; 
+    height: 500px; 
     background: red; 
     border-radius: 100%;
 }
@@ -296,7 +295,8 @@ nav ul.dropdown-content li a.active {
 .heroText {
     width: 40vw;
     text-align: center;
-    margin: 100px 5vw 0 0;
+    margin: 0;
+    padding-right: 5vw;
 }
 
 .heroText,
@@ -589,10 +589,6 @@ td.not {
     transform: scale(1);
 }
 
-.wrapper.active{
-    height: 550px;
-}
-
 .wrapper .form-box{
     width: 100%;
     padding: 40px;
@@ -684,7 +680,7 @@ td.not {
 }
 
 .register-link,
-.login-link{
+.login-link {
     width: 100%;
     height: 45px;
     background: #0AA91A;
@@ -696,6 +692,11 @@ td.not {
     color: #fff;
     font-weight: 500;
     margin-top: 25px;
+}
+
+.login-link a{
+    text-decoration: none;
+    color: #fff;
 }
 
 .register-link:hover,
@@ -766,7 +767,14 @@ td.not {
 
 
 /*   Width control for medium and small devices   */
-@media(max-width:768px) {
+
+@media screen and (max-width:768px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
     .hamburger {
         display: block;
     }
@@ -784,9 +792,9 @@ td.not {
     }
 
     .dropdown-content {
-        position: fixed;
+        position: absolute;
         left: -100%;
-        top: 73px;
+        top: 100%;
         gap: 0;
         flex-direction: column;
         background-color: #f2f2f2;
@@ -797,7 +805,7 @@ td.not {
         z-index: 1111;
     }
 
-    .nav-item {
+    .dropdown-content.active .nav-item {
         padding-bottom: 15px;
         border-bottom: 4px solid #fff;
         width: 100%;
@@ -820,11 +828,12 @@ td.not {
         max-width: 100px;
         padding: 0 60px;
         margin: 50px 0 50px 0;
+        height: 6%;
     }
 
     nav {
-        width: 100vw;
         height: 70px;
+        width: 100%;
     }
 
     table, 
@@ -839,13 +848,24 @@ td.not {
     }
 
     .heroText {
-        margin-left: 50px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin-top: 30px;
     }
 
     .circle2, 
     .circle {
-        width: 300px;
-        height: 300px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .circleContainer,
+    .textContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .link {
@@ -854,457 +874,141 @@ td.not {
 
     .aboutBox {
         overflow: hidden;
-        font-size: 14px;
+        font-size: 30px;
         padding-top: 20px;
+        width: 95vw;
     }
 
     .fNormal {
-        font-size: 13px;
+        font-size: 24px;
     }
 
     .hero {
-        padding-bottom: 0px;
-    }
-
-    .heroAbout, .sm {
-        padding-top: 100px;
-    }
-
-    .wrapper {
-        margin-top: 120px;
-        height: 500px;
-    }
-}
-
-
-@media(max-width:720px) {
-
-    * {
-        font-size: 20px;
-        margin: 0;
+        display: block;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 50px;
         padding: 0;
     }
 
-    .logo {
-        font-size: 30px;
-    }
-
-    .hero {
-        display: block;
-    }
-
-    .circle {
-        margin-left: 15vw;
-        margin-top: 80px;
-    }
-
-    .circle, .circle2 {
-        width: 500px;
+    .wrapper {
+        margin-top: 10%;
         height: 500px;
     }
-
-    .registerBtn {
-        width: 180px;
-        height: 50px;
-        font-size: 32px;
-    }
-
-    .heroText {
-        margin: 50px 35vw;
-        width: 50vw;
-    }
-
-    .heroTxt {
-        font-size: 44px;
-        width: fit-content;
-        margin-left: -30%;
-    }
-
-    .green {
-        font-size: 44px;
-    }
-
-    .heroExtra {
-        margin-top: 70px;
-        display: block;
-        margin-left: -15vw;
-    }
-
-    .heroExtra .link {
-        font-size: 26px;
-        width: fit-content;
-    }
-
-    .link.ed {
-        font-size: 12px;
-    }
-
-    .wrapper, .wrapper.active{
-        width: 80vw;
-        height: 600px;
-        margin-top: 100px;
-    }
-
-    .heroTxtAbout {
-        font-size: 10px;
-    }
-
+    
     .heroAbout {
-        display: block;
+        margin-top: 50px;
     }
 
     .heroAbout .circle {
-        margin-left: -2%;
-    }
-
-    .heroTxtAbout {
-        text-align: center;
-        font-size: 6em;
-        margin-left: 12vw;
-        margin-top: 40px;
-    }
-
-    .aboutInfo {
-        display: block;
-        margin-left: 15%;
-        font-size: 19px;
-    }
-
-    .aboutBox {
-        width: 65vw;
-    }
-
-    .greenColor, .fNormal, .aboutBox {
-        font-size: 18px;
-        margin-top: 8px;
-    }
-
-    .dropdown-content a {
-        font-size: 24px;
-    }
-}
-
-@media(max-width:475px) {
-
-    * {
-        font-size: 12px;
-    }
-
-    nav {
-        width: 100vw;
-    }
-
-    .hero {
-        display: block;
-        margin-left: 17%;
-    }
-
-    .registerBtn {
-        width: 150px;
-        height: 30px;
-        font-size: 16px;
-    }
-
-    .circle,
-    .circle2 {
         width: 250px;
         height: 250px;
     }
 
-    .heroText {
-        margin-top: 30px;
-    }
-
-    .heroTxt {
-        font-size: 18px;
-        width: 90vw;
-        margin-left: -30%;
-    }
-
-    .green {
-        font-size: 18px;
-    }
-
-    .heroExtra {
-        margin-left: 36%;
-    }
-
-    .link {
-        width: 230px;
-        margin-left: -38%;
-        font-size: 12px;
-    }
-
-    .link.ed {
-        margin-left: 25%;
-    }
-
-    .wrapper, .wrapper.active{
-        width: 80vw;
-        height: 480px;
-        margin-top: 100px;
-    }
-
-    .heroTxtAbout {
-        font-size: 10px;
-    }
-
-    .heroAbout {
-        display: block;
-    }
-
-    .heroAbout .circle {
-        margin-left: 13%;
-    }
-
-    .heroTxtAbout {
-        text-align: center;
-        font-size: 48px;
-        margin-left: 10%;
-        margin-top: 40px;
-        width: 60vw;
-    }
-
     .aboutInfo {
         display: block;
     }
 
-    .heroAbout, .aboutInfo {
-        margin-left: 12%;
-    }
-
-    .heroAbout .circle {
-        width: 270px;
-        height: 270px;
-        margin-left: 30px;
-    }
-
-    .aboutBox {
-        width: 68vw;
-    }
-
-    .greenColor, .fNormal {
-        font-size: 14px;
-        margin-top: 8px;
-    }
 }
 
-@media(max-width:375px) {
+@media screen and (max-width:600px) {
 
-    * {
-        font-size: 10px;
-    }
-
-
-    .hero {
-        display: block;
-        margin-left: 15%;
-    }
-
-    .registerBtn {
-        width: 150px;
-        height: 30px;
-        font-size: 16px;
-    }
-
-    .heroText {
+    .heroTxtAbout {
+        font-size: 30px;
         margin-top: 30px;
+        background-color: #0AA91A;
+        color: #FFF;
+        padding: 5px;
+        width: 100%;
     }
-
-    .heroTxt {
-        font-size: 18px;
-        width: 90vw;
-        margin-left: -30%;
-    }
-
-    .green {
-        font-size: 18px;
-    }
-
-    .heroExtra {
-        margin-left: 32%;
-    }
-
-    .link {
+    .heroAbout .circle {
         width: 200px;
-        margin-left: -25%;
-        font-size: 10px;
+        height: 200px;
     }
-
-    .link.ed {
-        margin-left: 18%;
-    }
-
-    .wrapper, .wrapper.active{
-        width: 80vw;
-        height: 450px;
-        margin-top: 100px;
-    }
-
-    .heroTxtAbout {
-        font-size: 10px;
-    }
-
     .heroAbout {
+        padding: 0;
         display: block;
     }
-
-    .heroAbout .circle {
-        margin-left: 13%;
-    }
-
-    .heroTxtAbout {
-        text-align: center;
-        font-size: 48px;
-        margin-left: 14%;
-        margin-top: 40px;
-    }
-
-    .aboutInfo {
-        display: block;
-    }
-
-    .heroAbout, .aboutInfo {
-        margin-left: 12%;
-    }
-
     .aboutBox {
-        width: 65vw;
+        overflow: hidden;
+        font-size: 18px;
+        padding-top: 20px;
+        width: 88%;
+        border: 1px solid #0AA91A;
     }
-
-    .greenColor, .fNormal {
-        font-size: 13px;
-        margin-top: 8px;
-    }
-
-    .dropdown-content a {
-        font-size: 14px;
-    }
-}
-
-@media(max-width:320px) {
-
-    * {
-        font-size: 10px;
-    }
-    nav {
-        width: 100vw;
-        height: 50px;
-        align-items: center;
-    }
-
-    table, .selected {
-        font-size: 10px;
-    }
-
-    table th, .link {
-        font-size: 8px;
-    }
-
-    .circle,
-    .circle2 {
-        width: 150px;
-        height: 150px;
-    }
-
-    table th:last-child {
-        padding-right: 5px;
-    }
-
-    .dropdown-content a {
-        font-size: 12px;
-    }
-
-    .wrapper, .wrapper.active{
-        width: 80vw;
-        height: 450px;
-        margin-top: 100px;
-    }
-
-    .select-btn2 {
-        width: 180px;
-    }
-
-    .wrapper .form-box.register{
-        transform: translateX(-400px);
-    }
-
-    .logo {
+    .fNormal {
         font-size: 20px;
     }
-
-    .register-link,
-    .login-link{
-        height: 30px;
-        width: 50%;
-        margin-left: 25%;
-    }
-
-    .hero {
-        display: block;
-        margin-left: 15%;
-    }
-
-    .registerBtn {
-        width: 150px;
-        height: 30px;
-        font-size: 16px;
-    }
-
     .heroText {
-        margin-top: 30px;
+        text-align: center;
+        width: 90%;
+        margin: 0;
+        padding-top: 35px;
     }
-
-    .heroTxt {
-        font-size: 18px;
-        width: 90vw;
-        margin-left: -30%;
+    .hero .heroTxt,
+    .hero .link {
+        font-size: 14px;
     }
-
-    .green {
-        font-size: 18px;
+    .hero button {
+        width: 120px;
+        height: 30px;
+        font-size: 14px;
     }
-
-    .heroExtra {
-        margin-left: 25%;
-    }
-
-    .link {
+    .circleContainer .circle,
+    .circleContainer .circle2 {
         width: 200px;
-        margin-left: -25%;
+        height: 200px;
+    }
+    .dropdown-content a {
+        font-size: 12px;
+    }
+    .select-btn .caret {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid #000;
+    }
+    .bar {
+        width: 20px;
+        height: 3px;
+        margin: 3px auto;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 90vw;
+        color: #0AA91A;
+        font-family: poppins;
+        font-size: 10px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    select,
+    .link.ed {
         font-size: 10px;
     }
 
-    .link.ed {
-        margin-left: 18%;
-    }
-
-    .heroAbout {
-        display: block;
-    }
-
-    .heroTxtAbout {
-        text-align: center;
-        font-size: 48px;
-        margin-left: 14%;
-        margin-top: 40px;
-    }
-
-    .aboutInfo {
-        display: block;
-    }
-
-    .heroAbout, .aboutInfo {
-        margin-left: 12%;
+    .fNormal,
+    .aboutBox {
+        font-size: 14px;
     }
 
     .aboutBox {
-        width: 65vw;
+        padding-top: 5px;
+        margin: 30px auto;
     }
-
-    .greenColor, .fNormal {
-        font-size: 12px;
-        margin-top: 5px;
+    .wrapper {
+        position: relative;
+        width: 80%;
+        height: 420px;
+        font-size: 10px;
     }
-
+    .wrapper .form-box {
+        padding: 20px;
+    }
+    .wrapper .form-box button {
+        height: 30px;
+        margin-top: 10px;
+    }
 }
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahab | WebCam</title>
+
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        .video {
+            display: block;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .links{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button, .down {
+            padding: 10px;
+            background-color: orange;
+            width: fit-content;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+
+        button:hover, .down:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+
+        .down {
+            display: none;
+            margin-right: 3.5%;
+        }
+
+        #snap.active .down {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="video">
+        <video id="webCam" autoplay playsinline></video>
+    <canvas id="canvas" width="600" height="400"></canvas>
+
+    <div class="links">
+        <button id="snap">Capture</button>
+
+        <a id="download-link" class="down">Download</a>
+    </div>
+    </div>
+    
+    
+    
+
+
+    <script>
+        'use strict';
+        const button = document.getElementById('snap');
+        const video = document.getElementById('webCam');
+        const canvas = document.getElementById('canvas');
+        const snap = document.getElementById('snap');
+        const errorMsgElement = document.getElementById('spanErrorMsg');
+        const downloadLink = document.getElementById('download-link');
+
+
+        const constraints = {
+            audio:false,
+            video:{width:600, height:400}
+        };
+
+        button.addEventListener('click', ()=> {
+            button.classList.toggle('active')
+        })
+
+        //access webcam
+        async function init() {
+            try{
+                const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                handleSuccess(stream);
+            }
+            catch(e){
+                errorMsgElement.innerHTML = 'navigator.getUserMedia.error:${e.toString()}';
+            }
+        }
+
+        //success
+        function handleSuccess(stream) {
+            window.stream = stream;
+            video.srcObject = stream;
+        }
+
+        //Load init
+        init();
+
+        //draw image
+        var context = canvas.getContext('2d');
+        snap.addEventListener('click', function(){
+            context.drawImage(video, 0, 0, 600, 400);
+
+
+        const capturedImage = canvas.toDataURL('image/png')
+
+        //Display Download link
+        downloadLink.href = capturedImage;
+        downloadLink.download = 'captured_image.png';
+        downloadLink.style.display = 'inline-block';
+        });
+
+        
+    </script>
+</body>
+</html>

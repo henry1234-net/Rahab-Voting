@@ -22,7 +22,7 @@
     padding: 5px;
     border-radius: 5px;
     font-weight: 600;
-    width: 320px;
+    width: 100%;
     border-radius: 10px;
     background: #f2f2f2;
 }
@@ -58,7 +58,7 @@
 
 .select-menu3 .list {
     position: absolute;
-    width: 320px;
+    width: 100%;
     font-weight: 500;
     overflow: hidden;
     height: 0;
@@ -89,39 +89,4 @@
     background: #f2f2f2;
     padding: 10px;
 }
-
-@media(max-width:720px) {
-    .select-menu3 .select-btn2, 
-    .select-menu3 .select-btn3, 
-    .select-menu3 .list {
-        width: 69vw;
-    }
-}
-
-@media (max-width:425px) {
-    .select-menu3 .select-btn2, 
-    .select-menu3 .select-btn3, 
-    .select-menu3 .list {
-        width: 63vw;
-    }
- }
-
- @media (max-width:375px) {
-    .select-menu3 .select-btn2, 
-    .select-menu3 .select-btn3, 
-    .select-menu3 .list {
-        width: 60vw;
-    }
- }
-
-  @media (max-width:320px) {
-    .select-menu3 .select-btn2, 
-    .select-menu3 .select-btn3, 
-    .select-menu3 .list {
-        width: 57vw;
-    }
- }
-
-
-
 
