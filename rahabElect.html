@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rahabStyle.css">
+    <title>Rahab | ElectResults</title>
+</head>
+<body>
+    <nav>
+        <label class="logo">Rahab</label>
+        <ul class="dropdown-content">
+            <li class="nav-item"><a href="rahabHome.html" class="hov">Home</a></li>
+            <li class="nav-item">
+                <div class="select-menu">
+                    <div class="select-btn" id="select-btn">
+                        <a id="text" class="active hov">Election</a>
+                        <div class="caret"></div>
+                    </div>
+            
+                    <ul class="list">
+                        <li class="option" style="--i:2;">
+                            <a href="rahabElect.html" class="option-text active">Election Results</a>
+                        </li>
+                        <li class="option" style="--i:1;">
+                            <a href="rahabVote.html" class="option-text">Vote</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item"><a href="rahabAbout.html" class="hov">About</a></li>
+            <li class="nav-item"><a href="#" class="hov">Contact</a></li>
+
+            <button class="loginBtn scale"><a href="rahabLogin.html" style="color: white;">Login</a></button>
+        </ul>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <div class="hero"></div>
+    
+    <div class="selected sm" id="selected">
+        <select name="">
+            <option value="" class="option" style="--i:4">Sort by</option>
+            <option value="" class="option" style="--i:4">State</option>
+            <option value="" class="option" style="--i:4">Party</option>
+            <option value="" class="option" style="--i:4">Date</option>
+            <option value="" class="option" style="--i:4">Vote Status</option>
+        </select>    
+    </div>
+    
+
+    
+        <table>
+             
+        
+            <tr>
+                <th>ID</th>
+                <th>PARTY VOTED</th>
+                <th>STATE / LGA</th>
+                <th>VOTE STATUS</th>
+            </tr>
+            <tr>
+                <td>BY/2023/1234</td>
+                <td>PDP</td>
+                <td>Bayelsa / Yenagoa</td>
+                <td>VOTED</td>
+            </tr>
+            <tr>
+                <td>ABJ/2023/1234</td>
+                <td>SDP</td>
+                <td>Abuja / FCT</td>
+                <td>VOTED</td>
+            </tr>
+            <tr>
+                <td>KAN/2023/1234</td>
+                <td>NPP</td>
+                <td>Kano / Kano</td>
+                <td class="not">NOT VOTED</td>
+            </tr>
+            <tr>
+                <td>ADA/2023/1234</td>
+                <td>APC</td>
+                <td>Adamawa / Yola</td>
+                <td>VOTED</td>
+            </tr>
+            <tr>
+                <td>BAU/2023/1234</td>
+                <td>PDP</td>
+                <td>Bauchi / Bauchi</td>
+                <td class="not">NOT VOTED</td>
+            </tr>
+            <tr>
+                <td>BY/2023/1234</td>
+                <td>PDP</td>
+                <td>Bayelsa / Yenagoa</td>
+                <td>VOTED</td>
+            </tr>
+            <tr>
+                <td>ABJ/2023/1234</td>
+                <td>SDP</td>
+                <td>Abuja / FCT</td>
+                <td>VOTED</td>
+            </tr>
+            <tr>
+                <td>KAN/2023/1234</td>
+                <td>NPP</td>
+                <td>Kano / Kano</td>
+                <td class="not">NOT VOTED</td>
+            </tr>
+            <tr>
+                <td>ADA/2023/1234</td>
+                <td>APC</td>
+                <td>Adamawa / Yola</td>
+                <td>VOTED</td>
+            </tr>
+            <tr>
+                <td>BAU/2023/1234</td>
+                <td>PDP</td>
+                <td>Bauchi / Bauchi</td>
+                <td class="not">NOT VOTED</td>
+            </tr>
+            
+        </table>
+    
+        
+        <div>
+            <a href="rahabVote.html" class="link ed">Click here to vote</a>
+        </div>
+    
+    
+    
+        
+       
+    
+    <script src="rahabScript.js"></script>
+</body>
+</html>
