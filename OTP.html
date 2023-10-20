@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/otpStyle.css">
+    <title>Rahab | OTP</title>
+</head>
+<body>
+
+    <div class="container success">
+        <h1>Verification successful</h1>
+    
+        <p>click <a href="rahabLogin.html">here</a> to go back</p>
+    </div>
+
+    <div class="container">
+        <h2>Verify your account</h2>
+        <p>We sent a six digit code to your email <br>
+        Enter the code below to confirm your email address</p>
+
+        <div class="codeContainer">
+            <input type="number" class="code" placeholder="0" min="0" max="9" required>
+            <input type="number" class="code" placeholder="0" min="0" max="9" required>
+            <input type="number" class="code" placeholder="0" min="0" max="9" required>
+            <input type="number" class="code" placeholder="0" min="0" max="9" required>
+            <input type="number" class="code" placeholder="0" min="0" max="9" required>
+            <input type="number" class="code" placeholder="0" min="0" max="9" required>
+        </div>
+
+        <div>
+            <button type="button" class="btnn btnPrimary"><a href="rahabSuccess.html">Verify</a></button>
+        </div>
+
+        <small>
+            Didn't receive a code? <strong>RESEND</strong>
+        </small>
+
+    </div>
+    
+    <script src="static/javascript/otpScript.js"></script>
+</body>
+</html>

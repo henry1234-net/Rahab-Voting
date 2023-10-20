@@ -4,70 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahab | Login</title>
-    <link rel="stylesheet" href="css/rahabLogin.css">
+    <link rel="stylesheet" href="static/css/rahabLogin.css">
 </head>
 <body>
     <div class="wrapper s">
-        <span class="icon-back"><img src="imgs/icons8-close.svg" width="18px"></span>
-        <span class="icon-close"><img src="imgs/icons8-close.svg" width="18px"></span>
         <div class="form-box login">
             <h2 style="color: #0AA91A;">Login</h2>
             <form action="#">
                 <div class="input-box">
                     <span class="icon"></span>
-                    <input type="email" required>
-                    <label>Email</label>
+                    <input type="email" placeholder="Voter's VIN" required>
                 </div>
 
                 <div class="input-box">
                     <span class="icon"></span>
-                    <input type="password" required>
-                    <label>Password</label>
+                    <input type="password" placeholder="Password" required>
                 </div>
 
                 <div class="remember-forgot">
                     <label><input type="checkbox">Remember me </input></label>
-                    <a href="#" class="green hov">Forgot password?</a>
+                    <a href="rahabRecover.html" class="green hov">Recover password?</a>
                 </div>
                 <button type="submit" class="btn">Login</button>
 
-                <div class="login-register">
-                    <p>Don't have an account?<a href="#" class="register-link"> Register</a></p>
-                </div>
             </form>
         </div>
+    </div>
 
-        <div class="form-box register">
-            <h2 style="color: #0AA91A;">Register</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"></span>
-                    <input type="text" required>
-                    <label>Username</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"></span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-
-                <div class="input-box">
-                    <span class="icon"></span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-
-                <div class="remember-forgot">
-                    <label><input type="checkbox">I agree to the terms and conditions</label>
-                </div>
-                <button type="submit" class="btn">Register</button>
-
-                <div class="login-register">
-                    <p>Already have an account?<a href="#" class="login-link"> Login</a></p>
-                </div>
-            </form>
-        </div>
-
-        <script src="javascript/rahabLogin.js"></script>
+        <script src="static/javascript/rahabLogin.js"></script>
 </body>
 </html>
