@@ -578,7 +578,7 @@ td.not {
     position: relative;
     width: 400px;
     height: 550px;
-    background: transparent;
+    background: rgba(255, 255, 255, .9);
     border-radius: 20px;
     box-shadow: 0 0 20px #0AA91A;
     display: flex;
@@ -893,7 +893,6 @@ td.not {
 
 
     .wrapper {
-        margin-top: 10%;
         height: 500px;
     }
     

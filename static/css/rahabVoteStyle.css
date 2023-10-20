@@ -92,3 +92,8 @@
     list-style: none;
 }
 
+@media screen and (max-width:768px) {
+    .wrapper {
+        width: 80%;
+    }
+}
