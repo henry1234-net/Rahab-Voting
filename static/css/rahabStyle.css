@@ -924,6 +924,10 @@ td.not {
         display: block;
     }
 
+    .position {
+        min-height: 60vh;
+    }
+
 }
 
 @media screen and (max-width:600px) {
