@@ -54,7 +54,7 @@ body {
 
 @media(max-width: 768px) {
     .container {
-        width: 70vw;
+        width: 80vw;
     }
 }
 
@@ -110,4 +110,5 @@ body {
     color: #fff;
     background-color: green;
     border-color: green;
+    width: max-content;
 }
