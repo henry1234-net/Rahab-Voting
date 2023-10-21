@@ -857,6 +857,7 @@ td.not {
     .circle {
         width: 400px;
         height: 400px;
+	    overflow: hidden;
     }
 
     .circle2 {
@@ -980,12 +981,6 @@ td.not {
         width: 200px;
         height: 200px;
     }
-
-    .circleContainer .circle2 {
-        width: 500px;
-        height: 200px;
-    }
-
     .dropdown-content a {
         font-size: 18px;
     }
@@ -1025,7 +1020,7 @@ td.not {
     }
     .wrapper {
         position: relative;
-        width: 80%;
+        width: 70%;
         height: 420px;
         font-size: 10px;
     }

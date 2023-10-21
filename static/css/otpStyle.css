@@ -52,12 +52,6 @@ body {
     font-weight: 300;
 }
 
-@media(max-width: 768px) {
-    .container {
-        width: 80vw;
-    }
-}
-
 @media(max-width: 600px) {
 
     .codeContainer {
