@@ -92,6 +92,13 @@
     list-style: none;
 }
 
+.position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
 @media screen and (max-width:768px) {
     .wrapper {
         width: 80%;
