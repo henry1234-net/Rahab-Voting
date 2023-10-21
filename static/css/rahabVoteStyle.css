@@ -96,11 +96,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 60vh;
+    min-height: 100vh;
 }
 
 @media screen and (max-width:768px) {
     .wrapper {
         width: 80%;
+    }
+
+    .position {
+        min-height: 60vh;
     }
 }
