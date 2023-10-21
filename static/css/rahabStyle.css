@@ -860,7 +860,7 @@ td.not {
     }
 
     .circle2 {
-        width: 400px;
+        width: 600px;
         height: 300px;
     }
 
@@ -928,7 +928,7 @@ td.not {
     }
 
     .position {
-        min-height: 60vh;
+        margin-top: 5%;
     }
 
 }
@@ -976,13 +976,18 @@ td.not {
         height: 30px;
         font-size: 14px;
     }
-    .circleContainer .circle,
-    .circleContainer .circle2 {
+    .circleContainer .circle {
         width: 200px;
         height: 200px;
     }
+
+    .circleContainer .circle2 {
+        width: 500px;
+        height: 200px;
+    }
+
     .dropdown-content a {
-        font-size: 12px;
+        font-size: 18px;
     }
     .select-btn .caret {
         border-left: 5px solid transparent;
@@ -1030,6 +1035,18 @@ td.not {
     .wrapper .form-box button {
         height: 30px;
         margin-top: 10px;
+    }
+
+    .position {
+        margin-top: 10%;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-6px) rotate(-45deg);
     }
 }
 
