@@ -19,17 +19,22 @@
         <p>We sent a six digit code to your email <br>
         Enter the code below to confirm your email address</p>
 
-        <div class="codeContainer">
+        <form id="codeContainer" action="rahabSuccess.html">
+            <div class="boxes">
+                <input type="number" class="code" min="0" max="9" required>
             <input type="number" class="code" min="0" max="9" required>
             <input type="number" class="code" min="0" max="9" required>
             <input type="number" class="code" min="0" max="9" required>
             <input type="number" class="code" min="0" max="9" required>
-            <input type="number" class="code" min="0" max="9" required>
-        </div>
+            </div>
+            
 
-        <div>
-            <button type="button" class="btnn btnPrimary"><a href="rahabSuccess.html">Verify</a></button>
-        </div>
+            <div>
+                <button type="submit" class="btnn btnPrimary" >Verify</button>
+            </div>
+        </form>
+
+       
 
         <small>
             Didn't receive a code? <strong>RESEND</strong>
