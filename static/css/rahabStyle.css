@@ -6,6 +6,11 @@
 }
 
 /* global*/
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .link {
     color: #0AA91A;
     font-size: 18px;
@@ -235,7 +240,7 @@ nav ul.dropdown-content li a.active {
 
 /*hero start*/   
 .registerBtn {
-    width: 200px;
+    width: 350px;
     height: 50px;
     background-color: #0AA91A;
     border-radius: 10px;
@@ -245,8 +250,6 @@ nav ul.dropdown-content li a.active {
     align-items: center;
     border: #0AA91A;
     font-size: 24px;
-    width: 200px;
-    height: 50px;
     margin-top: 20px;
 }
 .circle {
