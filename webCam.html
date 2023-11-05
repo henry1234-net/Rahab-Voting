@@ -6,19 +6,23 @@
     <title>Rahab | WebCam</title>
 
     <style>
-        body {
-            padding: 30px;
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         .video {
-            display: block;
+            display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 1;
+            margin: 20px;
         }
 
         .links{
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
         }
 
@@ -42,19 +46,29 @@
             margin-right: 3.5%;
         }
 
+        .overlay {
+            display: none;
+            position: absolute;
+            z-index: 10;
+            
+            width: 300px;
+            height: 300px;
+           border: 2px solid green;
+        }
+
 
     </style>
 </head>
 <body>
+    
     <div class="video">
+        <div id="overlay" class="overlay"></div>
         <video id="webCam" autoplay playsinline></video>
+        <span class="spanErrorMsg"></span>
 
-
-    <div class="links">
-        <button id="snap">Capture</button>
-
-        
     </div>
+    <div class="links">
+        <button id="snap">Capture</button>        
     </div>
     
     
@@ -66,13 +80,18 @@
         const video = document.getElementById('webCam');
         const snap = document.getElementById('snap');
         const errorMsgElement = document.getElementById('spanErrorMsg');
+        const overlay = document.getElementById('overlay');
 
 
         const constraints = {
             audio:false,
-            video:{width:600, height:400}
+            video:{width:1000, height:400}
         };
 
+        function showOverlay() {
+            overlay.style.display = 'block';
+            
+        }
         
 
         //access webcam
@@ -90,6 +109,7 @@
         function handleSuccess(stream) {
             window.stream = stream;
             video.srcObject = stream;
+            setTimeout(showOverlay, 2000);
         }
 
         //Load init
