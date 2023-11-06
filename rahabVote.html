@@ -6,8 +6,11 @@
     <title>Rahab | Vote</title>
     <link rel="stylesheet" href="static/css/rahabStyle.css">
     <link rel="stylesheet" href="static/css/rahabVoteStyle.css">
+    <link rel="stylesheet" href="static/css/rahabLogin.css">
+    <link rel="stylesheet" href="static/css/otpStyle.css">
+
 </head>
-<body style="background-image: url('static/img/flower.png'); background-size: auto; background-repeat: no-repeat;">
+<body>
     <nav>
         <label class="logo">Rahab</label>
         <ul class="dropdown-content">
@@ -41,11 +44,10 @@
         </div>
     </nav>
 
-    <div class="position">
-        <div class="wrapper">
-            <div class="form-box login">
+    <div class="positionVote">
+        <div class="wrapperVote">
+            <div class="form-box vote">
                 <h2 style="color:#0AA91A;">Vote</h2>
-                <form action="#">
                     
                         <select name="electionType" class="list">
                             <option value="option1"> Election Type</option>
@@ -70,7 +72,7 @@
 
                     <div class="input-box" id="candidate-input">
                         <span class="icon"></span>
-                        <input type="password" placeholder="" readonly>
+                        <input type="password" placeholder="Buhari" readonly>
                     </div>
     
                     <div class="input-box" id="voter-id">
@@ -83,52 +85,18 @@
                         <input class="pWord" type="password" placeholder="Enter your password" required>
                     </div>
                     
-                    <button type="submit" class="register-link">Next</button>
+                    <button type="submit" class="register-link"><a href="rahavVoteConfirm.html" class="next" >Next</a></button>
     
-                </form>
             </div>
     
-            <div class="form-box register">
-                <h2 style="color: #0AA91A; font-size: 1.4em;">Confirm your selection</h2>
-                <form action="#">
-                    <div class="select-menu3">
-                        <div class="select-btn2" id="select-btn2">
-                            <span class="eType">Election Type: <span class="eType1">Presidential</span></span>
-                        </div>
-                    </div>
-
-                    <div class="select-menu3 a">
-                        <div class="select-btn2" id="select-btn2">
-                            <span class="eType">Political Party: <span class="eType1">PDP</span></span>
-                        </div>
-                    </div>
-                       
-
-                    <div class="input-box" id="candidate-input">
-                        <span class="icon"></span>
-                        <input type="password" placeholder="" readonly>
-                    </div>
-
-                    <div class="input-box" id="voter-id">
-                        <span class="icon"></span>
-                        <input class="voteID" type="text" placeholder="voter ID" readonly>
-                    </div>
-
-                    <div class="input-box" id="voter-password">
-                        <span class="icon"></span>
-                        <input class="pWord" type="password" placeholder="Reconfirm your password" required>
-                    </div>
-                    
-                    <button type="submit" class="login-link"><a href="webCam.html">Finish</a></button>
-    
-                </form>
-            </div>
         </div>
     
     </div>
    
 
     <script src="static/javascript/rahabScript.js"></script>
-    <script src="static/javascript/rahabVote.js"></script>
+    <script src="static/javascript/otpScript.js"></script>
+    <script src="static/javascript/camScript.js"></script>
+    
 </body>
 </html>

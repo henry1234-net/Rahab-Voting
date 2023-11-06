@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahab | Login</title>
     <link rel="stylesheet" href="static/css/rahabLogin.css">
+    <link rel="stylesheet" href="static/css/rahabStyle.css">
+    <link rel="stylesheet" href="static/css/rahabVoteStyle.css">
+    <link rel="stylesheet" href="static/css/otpStyle.css">
+
 </head>
-<body style="background-image: url('static/img/forest.png');">
-    <div class="wrapper s">
-        <div class="form-box login">
+<body class="body">
+    <div class="wrapperLogin">
+        <div class="form-boxLogin login">
             <h2 style="color: #0AA91A;">Login</h2>
             <form action="#">
-                <div class="input-box">
-                    <span class="icon"></span>
+                <div class="input-boxLogin">
+                    <span class="iconLogin"></span>
                     <input type="text" placeholder="Voter's VIN" required>
                 </div>
 
-                <div class="input-box">
-                    <span class="icon"></span>
+                <div class="input-boxLogin">
+                    <span class="iconLogin"></span>
                     <input type="password" placeholder="Password" required>
                 </div>
 
@@ -25,12 +29,14 @@
                     <label><input type="checkbox">Remember me </input></label>
                     <a href="rahabRecover.html" class="green hov">Recover password?</a>
                 </div>
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btnLogin">Login</button>
 
             </form>
         </div>
     </div>
 
-        <script src="static/javascript/rahabLogin.js"></script>
+    <script src="static/javascript/otpScript.js"></script>
+    <script src="static/javascript/camScript.js"></script>
+    <script src="static/javascript/rahabScript.js"></script>
 </body>
 </html>
